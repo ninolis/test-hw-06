@@ -53,3 +53,15 @@ const images = [
   },
 ];
 */
+
+/////////////////////////////////////////
+// ** variant 2
+/*
+[...allCategories].forEach((element) => {
+  console.log(
+    `\nCategory: ${element.firstElementChild.textContent}\nElements: ${
+      element.getElementsByTagName('li').length
+    }`
+  );
+});
+*/
