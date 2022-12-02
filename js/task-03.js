@@ -21,11 +21,25 @@ const ul = document.querySelector('.gallery');
 let htmlString = '';
 
 for (const image of images) {
-  const str = `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" width="400px" height="250x"></li>`;
+  const str = `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" width="400px" height="250px"></li>`;
   htmlString += str;
 }
 
 ul.insertAdjacentHTML('afterbegin', htmlString);
+
+/////////////////////////////////////////
+// ** variant 2
+/*
+const ul = document.querySelector('.gallery');
+let htmlString = '';
+images.forEach((image) => {
+  const str = `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" width="400px" height="250px"></li>`;
+  htmlString += str;
+});
+
+ul.insertAdjacentHTML('afterbegin', htmlString);
+
+*/
 
 // =======================================================
 /*
@@ -52,16 +66,4 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-*/
-
-/////////////////////////////////////////
-// ** variant 2
-/*
-[...allCategories].forEach((element) => {
-  console.log(
-    `\nCategory: ${element.firstElementChild.textContent}\nElements: ${
-      element.getElementsByTagName('li').length
-    }`
-  );
-});
 */
